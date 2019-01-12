@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="Devaraj_M_Javascript.js"></script>
+  </head>
+
+  <body>
+    <h1>Assignment</h1>
+   
+    <input type="text" placeholder="Name please" id="name"/>
+    <input type="submit" id="s"/>
+    <p id="d"></p>
+    <script type="text/javascript">
+    	document.getElementById('s').onclick=function(){
+    	  var x=document.getElementById('name').value;
+    	  var result="";
+    	  if(x==""){
+    	  	alert("Name must be filled");
+    	  	return false;
+    	  }
+    	  for(var i=0;i<x.length;i++)
+    	    {
+    	      var c=x.charAt(i);
+    	      if(c==c.toUpperCase())
+    	      {
+    	        result+=c.toLowerCase();
+    	        //alert(c+"....in LowerCase");
+    	      }
+    	      else
+    	      {
+    	        result+=c.toUpperCase();
+    	        //alert(c+"....in UpperCase");
+    	      }
+    	    }
+    	    document.getElementById('d').innerHTML = result;
+    	}
+  </script>
+  </body>
+</html>
