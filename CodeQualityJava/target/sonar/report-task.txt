@@ -1,0 +1,6 @@
+projectKey=org.accolite.assignment:AssignmentSpring
+serverUrl=http://localhost:9000
+serverVersion=7.5.0.20543
+dashboardUrl=http://localhost:9000/dashboard?id=org.accolite.assignment%3AAssignmentSpring
+ceTaskId=AWh5-_XMaSjwk9-jR_BE
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWh5-_XMaSjwk9-jR_BE
