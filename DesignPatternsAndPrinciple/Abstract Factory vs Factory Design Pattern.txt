@@ -1,0 +1,15 @@
+   Abstract Factory Design Pattern  |     Factory Design Pattern
+                                    |
+ 1.  Creates Factory                |     Creates Products
+                                    |
+ 2.  Uses composition to delegate   |     Uses inheritance and relies
+     responsibility of creating     |     on derived class to create 
+     object to another class        |     object.
+   				    |
+ 3.  They can also use Builder      |
+     design pattern to build object |
+     instead of Factory pattern.    |
+ 4.  Loosely coupled                |     Tightly coupled
+		                    |
+ 5.  Family of objects can be       |     Only one object of particular
+     created                        |     class type can be created
