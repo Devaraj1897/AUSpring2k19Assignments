@@ -3,11 +3,11 @@ package org.assignment.observerpattern;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product implements Subject{
+public class Product implements ObserverInterface{
 	
 	
 	private String productName;
-	private List<Observer> listOfObserver=new ArrayList<Observer>();
+	private List<Flipkart> listOfObserver=new ArrayList<Flipkart>();
 	
 	private boolean available;
 	
@@ -31,27 +31,27 @@ public class Product implements Subject{
 		this.productName = productName;
 	}
 
-	public List<Observer> getListOfObserver() {
+	public List<Flipkart> getListOfObserver() {
 		return listOfObserver;
 	}
 
-	public void setListOfObserver(List<Observer> listOfObserver) {
+	public void setListOfObserver(List<Flipkart> listOfObserver) {
 		this.listOfObserver = listOfObserver;
 	}
 
 	@Override
-	public void registerObserver(Observer observer) {
+	public void registerObserver(Flipkart observer) {
 		listOfObserver.add(observer);
 	}
 
 	@Override
-	public void removedObserver(Observer observer) {
+	public void removedObserver(Flipkart observer) {
 		listOfObserver.remove(observer);
 	}
 
 	@Override
 	public void notifyObserver() {
-		for(Observer ob:listOfObserver) {
+		for(Flipkart ob:listOfObserver) {
 			ob.update(productName);
 		}
 	}

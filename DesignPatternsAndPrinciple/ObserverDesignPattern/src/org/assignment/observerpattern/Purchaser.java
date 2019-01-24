@@ -1,9 +1,9 @@
 package org.assignment.observerpattern;
 
-public class Customer implements Observer {
+public class Purchaser implements Flipkart {
 
 	private String customerName;
-	private Subject subject;
+	private ObserverInterface subject;
 	
 	public String getCustomerName() {
 		return customerName;
@@ -13,11 +13,11 @@ public class Customer implements Observer {
 		this.customerName = customerName;
 	}
 
-	public Subject getSubject() {
+	public ObserverInterface getSubject() {
 		return subject;
 	}
 
-	public void setSubject(Subject subject) {
+	public void setSubject(ObserverInterface subject) {
 		this.subject = subject;
 	}
 

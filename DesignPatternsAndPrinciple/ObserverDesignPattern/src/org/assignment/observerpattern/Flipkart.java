@@ -1,6 +1,6 @@
 package org.assignment.observerpattern;
 
-public interface Observer {
+public interface Flipkart {
 	
 	public void update(String productName);
 }

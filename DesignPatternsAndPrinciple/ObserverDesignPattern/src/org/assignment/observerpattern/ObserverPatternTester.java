@@ -2,8 +2,8 @@ package org.assignment.observerpattern;
 
 public class ObserverPatternTester {
   public static void main(String[] args) {
-	Customer customer1=new Customer();
-	Customer customer2=new Customer();
+	Purchaser customer1=new Purchaser();
+	Purchaser customer2=new Purchaser();
 	
 	customer1.setCustomerName("Kishore");
 	customer2.setCustomerName("Tarun");
