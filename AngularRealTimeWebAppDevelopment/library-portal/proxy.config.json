@@ -1,0 +1,7 @@
+{
+    "/LibraryPortal/*":{
+        "target": "http://localhost:6061",
+        "secure": false
+    }
+
+}

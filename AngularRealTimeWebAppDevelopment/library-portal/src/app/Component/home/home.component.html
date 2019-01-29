@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>LibraryPortal|Home</title>
+        <style>
+                #books {
+                  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                  border-collapse: collapse;
+                  width: 100%;
+                }
+                
+                #books td, #books th {
+                  border: 1px solid #ddd;
+                  padding: 8px;
+                }
+                
+                #books tr:nth-child(even){background-color: #f2f2f2;}
+                
+                #books tr:hover {background-color: #ddd;}
+                
+                #books th {
+                  padding-top: 12px;
+                  padding-bottom: 12px;
+                  text-align: left;
+                  background-color: rgb(151, 160, 21);
+                  color: white;
+                }
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+button[type=button] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+        </style>
+    </head>
+<body>
+<div class="jumbotron">
+  <h3>Add a Book:</h3>
+  
+      <label for="bookId">ID:</label>
+      <input type="text" id="bookId" [(ngModel)]="book.id">
+  
+  
+      <label for="title">Title:</label>
+      <input type="text" id="title" [(ngModel)]="book.name">
+  
+      <label for="desc">Description:</label>
+      <input type="text" id="desc" [(ngModel)]="book.description">
+  
+      <label for="author">Author:</label>
+      <input type="text" id="author" [(ngModel)]="book.author">
+ 
+      <label for="price">Price:</label>
+      <input type="text" id="price" [(ngModel)]="book.price">
+  <button type="button" (click)="postData()">Add Book</button>
+  <br><br><br>
+</div>
+<h1>Books Available</h1>
+<table id="books">
+    <tr>
+        <th>
+            Book Id
+        </th>
+        <th>
+            Book Name
+        </th>
+        <th>Book Author</th>
+        <th>Book Description</th>
+        <th>Book Price</th>
+        <th>
+
+        </th>
+    </tr>
+    <tr *ngFor="let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.description}}</td>
+        <td>{{book.price}}</td>
+        <td><button type="button" (click)="addToCart(book)">Add to Cart</button></td>
+    </tr>
+</table>  
+</body>
+</html>
